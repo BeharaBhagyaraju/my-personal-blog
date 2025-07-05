@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config(); 
 
 const app = express();
-const port = process.env.PORT1 || 4000;
+const port = process.env.PORT || 4000; // ✅ use Render-compatible PORT
 
 // In-memory data store
 let posts = [
@@ -49,14 +49,14 @@ app.get("/posts", (req, res) => {
 app.get("/posts/:id", (req, res) => {
   const resultid = parseInt(req.params.id);
   const resultans = posts.find((post) => post.id === resultid);
-  if (!resultans) return res.status(404).json({ message: "post not found" }); // ✅ Fixed
+  if (!resultans) return res.status(404).json({ message: "post not found" });
   res.json(resultans);
 });
 
 // Create a new post
 app.post("/posts", (req, res) => {
   const newpost = {
-    id: ++lastId, // ✅ Changed from posts.length + 1
+    id: ++lastId,
     title: req.body.title,
     content: req.body.content,
     author: req.body.author,
