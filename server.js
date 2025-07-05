@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 const port = process.env.PORT2 || 3000;
 
 // ✅ Use this for Render deployment
-const API_URL = `https://my-personal-blog-j1cw.onrender.com`;
+const API_URL = `https://my-personal-blog-backend.vercel.app/`;
 
 // 🔁 Use this for local testing instead:
 // const API_URL = `http://localhost:4000`;
