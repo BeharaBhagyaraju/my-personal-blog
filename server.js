@@ -9,7 +9,7 @@ const app = express();
 
 // ...existing code...
 const port = process.env.PORT2 || 3000; // Use env variable or default to 4000
-const API_URL = `http://localhost:${Number(process.env.PORT1) || 4000}`;
+const API_URL = `https://my-personal-blog-j1cw.onrender.com/${Number(process.env.PORT1) || 4000}`;
 // filepath: d:\projects\BlogApi\server.js
 
 app.use(express.static("public"));
