@@ -42,6 +42,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Write your code here//
+app.get("/",(req,res)=>{
+  res.send("hello");
+});
 
 //CHALLENGE 1: GET All posts
 app.get("/posts" , (req ,res) =>{
